@@ -1,0 +1,87 @@
+#content {
+    padding: 20px;
+}
+
+#welcome-banner {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+#welcome-banner h1, #welcome-banner p {
+    margin: 0;
+}
+
+#welcome-banner a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#welcome-banner a:hover {
+    background-color: #0056b3;
+}
+
+#featured-products, #promotions {
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.promotion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.promotion-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: calc(50% - 10px);
+}
+
+.promotion-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-item a {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category-item a:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,25 @@
+#content {
+    padding: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.add-to-cart button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-to-cart button:hover {
+    background-color: #0056b3;
+}

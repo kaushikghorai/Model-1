@@ -53,3 +53,37 @@ footer {
     margin-top: 20px;
 }
 
+
+section {
+    margin: 40px 0;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+}
+
+.team-member p {
+    color: #6c757d;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
