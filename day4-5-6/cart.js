@@ -12,5 +12,4 @@ function changePrize(input){
 	var quantity = input.value;
 	var subTotal = prize * quantity;
 	input.parentNode.parentNode.childNodes[7].innerText = subTotal;
-	
-}	
+}

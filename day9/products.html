@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+<div id="header"></div>
+
+<div id="content" class="container page-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar glass-panel">
+        <h3>Filters</h3>
+        <div class="filter-group">
+            <h4>Search</h4>
+            <div class="form-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+            </div>
+        </div>
+        <div class="filter-group">
+            <h4>Categories</h4>
+            <ul class="filter-list">
+                <li><label><input type="checkbox" checked> Audio</label></li>
+                <li><label><input type="checkbox"> Wearables</label></li>
+                <li><label><input type="checkbox"> Peripherals</label></li>
+                <li><label><input type="checkbox"> Smart Home</label></li>
+                <li><label><input type="checkbox"> Accessories</label></li>
+            </ul>
+        </div>
+        <div class="filter-group">
+            <h4>Price Range</h4>
+            <input type="range" min="0" max="1000" value="750" class="w-100">
+            <div class="price-labels">
+                <span>$0</span>
+                <span>$750</span>
+            </div>
+        </div>
+        <div class="filter-group">
+            <h4>Availability</h4>
+            <ul class="filter-list">
+                <li><label><input type="checkbox" checked> In Stock</label></li>
+                <li><label><input type="checkbox"> On Sale</label></li>
+            </ul>
+        </div>
+        <button id="applyFiltersBtn" class="btn btn-primary w-100 mt-4">Apply Filters</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="products-main">
+        <div class="products-header">
+            <div>
+                <h2>All Products</h2>
+                <p>Showing 1-4 of 24 results</p>
+            </div>
+            <select class="form-control sort-select">
+                <option>Sort by: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Customer Reviews</option>
+                <option>Newest Arrivals</option>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card glass-panel">
+                <div class="product-badge badge-new">New</div>
+                <div class="product-img-wrapper">
+                    <img src="images/product1.png" alt="Quantum Headphones">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★★★ <span class="reviews">(128)</span>
+                    </div>
+                    <h3>Quantum Noise-Canceling Headphones</h3>
+                    <div class="price-container">
+                        <span class="price">$299.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+
+            <div class="product-card glass-panel">
+                <div class="product-badge badge-sale">Sale</div>
+                <div class="product-img-wrapper">
+                    <img src="images/product2.png" alt="Nexus Smartwatch">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★★☆ <span class="reviews">(84)</span>
+                    </div>
+                    <h3>Nexus Smartwatch Pro</h3>
+                    <div class="price-container">
+                        <span class="price">$199.00</span>
+                        <span class="old-price">$249.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+
+            <div class="product-card glass-panel">
+                <div class="product-img-wrapper">
+                    <img src="images/product3.png" alt="Aero Mechanical Keyboard">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★★★ <span class="reviews">(312)</span>
+                    </div>
+                    <h3>Aero Wireless Mechanical Keyboard</h3>
+                    <div class="price-container">
+                        <span class="price">$149.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+            
+            <div class="product-card glass-panel">
+                <div class="product-img-wrapper">
+                    <img src="images/product1.png" alt="Quantum Earbuds">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★☆☆ <span class="reviews">(42)</span>
+                    </div>
+                    <h3>Quantum Wireless Earbuds</h3>
+                    <div class="price-container">
+                        <span class="price">$99.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+            <div class="product-card glass-panel hidden-product" style="display: none;">
+                <div class="product-badge badge-sale">Sale</div>
+                <div class="product-img-wrapper">
+                    <img src="images/hero-device.png" alt="Pro Laptop">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★★★ <span class="reviews">(89)</span>
+                    </div>
+                    <h3>Zenith Pro Laptop</h3>
+                    <div class="price-container">
+                        <span class="price">$1299.00</span>
+                        <span class="old-price">$1499.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+
+            <div class="product-card glass-panel hidden-product" style="display: none;">
+                <div class="product-img-wrapper">
+                    <img src="images/product3.png" alt="Gaming Mouse">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        ★★★★☆ <span class="reviews">(210)</span>
+                    </div>
+                    <h3>Precision Gaming Mouse</h3>
+                    <div class="price-container">
+                        <span class="price">$79.00</span>
+                    </div>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center" style="margin-top: var(--space-xl); display: flex; justify-content: center;">
+            <button id="loadMoreBtn" class="btn btn-secondary" style="padding: 1rem 3rem; font-size: 1.125rem;">
+                Load More Products
+            </button>
+        </div>
+    </main>
+</div>
+
+<div id="footer"></div>
+<script src="header.js"></script>
+<script src="products.js"></script>
+<script src="footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TechStore</title>
+    <meta name="description" content="Discover premium tech gear and the latest electronics at TechStore.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div id="header"></div>
+
+<div id="content">
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Experience the <span class="text-gradient">Future</span> Today</h1>
+            <p class="hero-subtitle text-muted">Explore a curated selection of premium electronics, gadgets, and accessories designed for the modern lifestyle.</p>
+            <div class="hero-actions">
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+                <a href="category.html" class="btn btn-secondary">View Categories</a>
+                <button id="openModalBtn" class="btn btn-secondary" style="margin-left: 10px;">Get 15% Off</button>
+            </div>
+        </div>
+        <div class="hero-image glass-panel">
+            <img src="images/hero-device.png" alt="Premium Tech Devices" id="hero-img">
+        </div>
+    </section>
+
+    <section id="featured-products" class="container section">
+        <div class="section-header text-center">
+            <h2>Featured Products</h2>
+            <p class="text-muted">Handpicked by our tech experts</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card glass-panel">
+                <div class="product-img-wrapper">
+                    <img src="images/product1.png" alt="Quantum Headphones">
+                </div>
+                <div class="product-info">
+                    <h3>Quantum Noise-Canceling Headphones</h3>
+                    <p class="price">$299.00</p>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+            <div class="product-card glass-panel">
+                <div class="product-img-wrapper">
+                    <img src="images/product2.png" alt="Nexus Smartwatch">
+                </div>
+                <div class="product-info">
+                    <h3>Nexus Smartwatch Pro</h3>
+                    <p class="price">$199.00</p>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+            <div class="product-card glass-panel">
+                <div class="product-img-wrapper">
+                    <img src="images/product3.png" alt="Aero Mechanical Keyboard">
+                </div>
+                <div class="product-info">
+                    <h3>Aero Wireless Mechanical Keyboard</h3>
+                    <p class="price">$149.00</p>
+                    <a href="productdetail.html" class="btn btn-primary w-100 mt-2">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="container section">
+        <div class="section-header text-center">
+            <h2>Shop by Category</h2>
+        </div>
+        <div class="category-grid">
+            <a href="category.html" class="category-card glass-panel">
+                <div class="category-content">
+                    <h3>Audio</h3>
+                    <p class="text-muted">Headphones, Speakers & Accessories</p>
+                </div>
+            </a>
+            <a href="category.html" class="category-card glass-panel">
+                <div class="category-content">
+                    <h3>Wearables</h3>
+                    <p class="text-muted">Smartwatches & Fitness Trackers</p>
+                </div>
+            </a>
+            <a href="category.html" class="category-card glass-panel">
+                <div class="category-content">
+                    <h3>Peripherals</h3>
+                    <p class="text-muted">Keyboards, Mice & Monitors</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Custom Modal -->
+    <div id="promoModal" class="custom-modal-backdrop">
+        <div class="custom-modal glass-panel text-center">
+            <button id="closeModalBtn" class="custom-modal-close">&times;</button>
+            <h2 class="text-gradient" style="margin-bottom: 1rem; font-size: 2rem;">Exclusive Offer!</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Sign up for our newsletter today and get 15% off your first premium tech purchase.</p>
+            <div class="form-group text-left">
+                <input type="email" class="form-control" placeholder="Enter your email address">
+            </div>
+            <button class="btn btn-primary w-100" id="submitModalBtn">Claim My Discount</button>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<script src="header.js"></script>
+<script src="home.js"></script>
+<script src="footer.js"></script>
+</body>
+</html>
