@@ -1,0 +1,371 @@
+/* --- Global Resets & Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --white: #ffffff;
+    --bg-light: #f9fafb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* --- Legacy Header Layout (Kept for fallback) --- */
+#global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Logo --- */
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    line-height: 0;
+}
+
+/* --- Navigation --- */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Underline Animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* --- Buttons --- */
+.btn-cta {
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.btn-cta:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Mobile Menu Toggle --- */
+.menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 25px;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        border-top: 1px solid #f1f5f9;
+        
+        transform: translateY(-150%);
+        opacity: 0;
+        z-index: -1;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .nav-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+        z-index: 999;
+    }
+
+    .btn-cta {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+/* ========================================
+   GLOBAL HEADER STYLES (Merge Safe)
+   Specific styles for the injected JS header
+   ========================================
+*/
+
+:root {
+    /* Define header-specific variables to avoid overwriting yours */
+    --gh-primary: #2563eb;
+    --gh-text-dark: #1e293b;
+    --gh-text-light: #64748b;
+    --gh-white: #ffffff;
+    --gh-bg: rgba(255, 255, 255, 0.98);
+    --gh-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --gh-height: 60px;
+}
+
+/* Scoped Header Container */
+#global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--gh-height);
+    background-color: var(--gh-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--gh-shadow);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.gh-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Logo Styles */
+.gh-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gh-text-dark);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.gh-logo span {
+    color: var(--gh-primary);
+    font-size: 1.8rem;
+    line-height: 0;
+    margin-left: 2px;
+}
+
+/* Navigation Styles */
+.gh-nav {
+    display: flex;
+    align-items: center;
+}
+
+.gh-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.gh-nav-item {
+    margin: 0;
+}
+
+.gh-nav-link {
+    text-decoration: none;
+    color: var(--gh-text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.gh-nav-link:hover,
+.gh-nav-link.active {
+    color: var(--gh-primary);
+}
+
+/* Underline Animation */
+.gh-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--gh-primary);
+    transition: width 0.3s ease;
+}
+
+.gh-nav-link:hover::after,
+.gh-nav-link.active::after {
+    width: 100%;
+}
+
+/* CTA Button */
+.gh-btn-cta {
+    padding: 8px 22px;
+    background-color: var(--gh-primary);
+    color: var(--gh-white) !important;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    border: none;
+}
+
+.gh-btn-cta:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Mobile Toggle */
+.gh-menu-toggle {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--gh-text-dark);
+    padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gh-menu-toggle {
+        display: block;
+    }
+
+    .gh-nav {
+        position: absolute;
+        top: var(--gh-height);
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        border-top: 1px solid #f1f5f9;
+        flex-direction: column;
+        padding: 0;
+        
+        /* Hidden state */
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        z-index: -1;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+
+    .gh-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .gh-nav-list {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .gh-nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gh-nav-link {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+    
+    .gh-nav-link::after {
+        display: none;
+    }
+
+    /* CTA in mobile menu */
+    .gh-btn-cta {
+        display: inline-block;
+        margin-top: 10px;
+        width: 80%;
+        text-align: center;
+    }
+}
+
