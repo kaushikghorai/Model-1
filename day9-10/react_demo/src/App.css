@@ -42,5 +42,10 @@ h1{
 	color: #ff0000;
 }
 .sidebar{
-	width: 20%;
+	width: 15%;
+	border: 1px solid;
+	height: 900px;
+}
+.main{
+	display: flex;
 }
