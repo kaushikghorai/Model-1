@@ -1,0 +1,3 @@
+[submodule "day9-14/dashboard/backend/public"]
+	path = day9-14/dashboard/backend/public
+	url = https://github.com/pro-prodipto/Netflix-Website-Project.git
