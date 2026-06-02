@@ -8,7 +8,7 @@ function Header(){
 				<li><Link to="/about">AboutUs</Link></li>
 				<li><Link to="/gallery">Gallery</Link></li>
                 <li><Link to="/products">Products</Link></li>
-				<li><Link to="/signup">Sign Up></Link></li>
+				<li><Link to="/signup">Sign Up</Link></li>
 			</ul>	
 		</div>
 	);

@@ -2,7 +2,7 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 import './App.css';
 import { useState } from 'react';
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Registration from './Registration.js';
 import Products from './Products.js';
 function Sidebar(){
