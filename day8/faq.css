@@ -45,7 +45,7 @@
 
 .faq-item.active {
     border-color: var(--primary);
-    background: rgba(30, 41, 59, 0.9);
+    background: var(--surface-hover);
 }
 
 .faq-item:hover {

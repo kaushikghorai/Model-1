@@ -1,3 +1,32 @@
-ul{
-	display: flex;
+.myheader {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.myheader ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    height: 70px;
+    align-items: center;
+    gap: 30px;
+}
+
+.myheader ul li a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.myheader ul li a:hover {
+    color: #4f46e5;
+    background-color: #f1f5f9;
 }

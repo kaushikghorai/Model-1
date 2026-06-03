@@ -16,11 +16,11 @@ const staticpath = path.join(__dirname, "/public");
 app.use(express.static(staticpath));
 
 app.get("/", (req, res) => {
-    res.send("<h1 style='background: #00ffff; color: #ff0000;'>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>Welcome</h2>");
+    res.send("<head><link rel='stylesheet' href='/express.css'></head><h1>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>Welcome</h2>");
 });
 
 app.get("/about", (req, res) => {
-    res.send("<h1 style='background: #00ffff; color: #ff0000;'>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>This is a About page. Thanks for exploring. Have a great Learning</h2>");
+    res.send("<head><link rel='stylesheet' href='/express.css'></head><h1>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>This is a About page. Thanks for exploring. Have a great Learning</h2>");
 });
 
 // Changed signup from GET to POST for security and standard practices
@@ -46,7 +46,7 @@ app.post("/signup", async (req, res) => {
 });
 
 app.get("/netflix", (req, res) => {
-    res.send("<h1 style='background: #00ffff; color: #ff0000;'>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>You have lost your path please go through the navigation.</h2>");
+    res.send("<head><link rel='stylesheet' href='/express.css'></head><h1>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>You have lost your path please go through the navigation.</h2>");
 });
 
 app.listen(5500, () => {

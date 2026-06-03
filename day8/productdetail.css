@@ -56,7 +56,7 @@
 }
 
 .thumb-placeholder {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 .thumbnail-list img.active, .thumbnail-list img:hover {
@@ -169,7 +169,7 @@
 }
 
 .qty-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.05);
 }
 
 .qty-input {
@@ -210,7 +210,7 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,7 +224,7 @@
 
 .features-list .feature-item {
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border);
     color: var(--text-main);
     display: flex;
     align-items: center;
@@ -276,7 +276,7 @@
     margin-bottom: var(--space-lg);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    background: rgba(15, 23, 42, 0.3);
+    background: var(--surface);
 }
 .review-header {
     display: flex;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Registration.css";
 
 function Register() {
   const navigate = useNavigate();
@@ -44,37 +45,43 @@ function Register() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <form onSubmit={handleSubmit}>
+    <div className="register-container">
+      <form onSubmit={handleSubmit} className="register-form">
         <h2>Register Form</h2>
 
-        <input
-          type="text"
-          placeholder="Enter Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br /><br />
+        <div className="register-form-group">
+          <input
+            type="text"
+            placeholder="Enter Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="register-input"
+          />
+        </div>
 
-        <input
-          type="email"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br /><br />
+        <div className="register-form-group">
+          <input
+            type="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="register-input"
+          />
+        </div>
 
-        <input
-          type="password"
-          placeholder="Enter Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br /><br />
+        <div className="register-form-group">
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="register-input"
+          />
+        </div>
 
-        <p style={{ color: "red" }}>{error}</p>
+        {error && <p className="register-error">{error}</p>}
 
-        <button type="submit">Register</button>
+        <button type="submit" className="register-btn">Register</button>
       </form>
     </div>
   );

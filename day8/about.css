@@ -28,7 +28,7 @@
 
 /* Story Section */
 .story-content {
-    background: rgba(30, 41, 59, 0.4);
+    background: rgba(255, 255, 255, 0.45);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
     border: 1px solid var(--border);

@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import "./Products.css";
+
 function Products(){
     const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -25,54 +27,54 @@ function Products(){
 
   // --- CONDITIONAL RENDERING ---
   if (isLoading) {
-    return <div style={{ padding: "20px" }}>Loading products from API...</div>;
+    return <div className="loading-msg">Loading products from API...</div>;
   }
 
   if (error) {
-    return <div style={{ padding: "20px", color: "red" }}>Error: {error}</div>;
+    return <div className="error-msg">Error: {error}</div>;
   }
 
   // --- UI RENDER (Table Format) ---
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="products-container">
       <h2>Products API List</h2>
 
       {/* HTML Table to display the product data */}
-      <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "15px" }}>
+      <table className="products-table">
 
         {/* Table Headings tailored for products */}
         <thead>
-          <tr style={{ backgroundColor: "#f2f2f2", textAlign: "left" }}>
-            <th style={{ border: "1px solid #ddd", padding: "10px", width: "5%" }}>ID</th>
-            <th style={{ border: "1px solid #ddd", padding: "10px", width: "10%" }}>Image</th>
-            <th style={{ border: "1px solid #ddd", padding: "10px", width: "45%" }}>Product Title</th>
-            <th style={{ border: "1px solid #ddd", padding: "10px", width: "20%" }}>Category</th>
-            <th style={{ border: "1px solid #ddd", padding: "10px", width: "20%" }}>Price</th>
+          <tr className="products-thead">
+            <th className="products-th text-center" style={{ width: "5%" }}>ID</th>
+            <th className="products-th text-center" style={{ width: "10%" }}>Image</th>
+            <th className="products-th" style={{ width: "45%" }}>Product Title</th>
+            <th className="products-th" style={{ width: "20%" }}>Category</th>
+            <th className="products-th" style={{ width: "20%" }}>Price</th>
           </tr>
         </thead>
 
         {/* Table Body (Looping through the products) */}
         <tbody>
           {products.map((product) => (
-            <tr key={product.id} style={{ borderBottom: "1px solid #ddd" }}>
+            <tr key={product.id} className="product-tr">
 
-              <td style={{ border: "1px solid #ddd", padding: "10px" }}>{product.id}</td>
+              <td className="product-td text-center">{product.id}</td>
 
               {/* Product Image: Resized so it fits nicely in the table */}
-              <td style={{ border: "1px solid #ddd", padding: "10px", textAlign: "center" }}>
+              <td className="product-td product-image">
                 <img
                   src={product.image}
                   alt={product.title}
-                  style={{ width: "50px", height: "50px", objectFit: "contain" }}
+                  className="product-img-element"
                 />
               </td>
 
-              <td style={{ border: "1px solid #ddd", padding: "10px" }}><strong>{product.title}</strong></td>
+              <td className="product-td product-title-cell"><strong>{product.title}</strong></td>
 
-              <td style={{ border: "1px solid #ddd", padding: "10px", textTransform: "capitalize" }}>{product.category}</td>
+              <td className="product-td product-category">{product.category}</td>
 
               {/* Added a dollar sign and styled the price in green */}
-              <td style={{ border: "1px solid #ddd", padding: "10px", color: "green", fontWeight: "bold" }}>
+              <td className="product-td product-price-cell">
                 ${product.price}
               </td>
 
