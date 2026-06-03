@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div id="content">
+    <h1>All Products</h1>
+
+    <!-- Filter and Search -->
+    <form action="#" method="get" class="filter-form">
+        <input type="text" name="search" placeholder="Search products...">
+        <button type="submit">Search</button>
+        <select name="category">
+            <option value="">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="home_appliances">Home Appliances</option>
+        </select>
+    </form>
+
+    <!-- Product Table -->
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Product Row -->
+            <tr>
+                <td>Product Name 1</td>
+                <td>$50.00</td>
+                <td>Electronics</td>
+                <td>This is a sample product description.</td>
+                <td><a href="productdetail.html">View Details</a></td>
+            </tr>
+            <!-- Add more product rows here -->
+        </tbody>
+    </table>
+
+</div>
+
+<div id="footer"></div>
+<script src="header.js"></script>
+<script src="scripts.js"></script>
+<script src="products.js"></script>
+<script src="footer.js"></script>
+</body>
+</html>

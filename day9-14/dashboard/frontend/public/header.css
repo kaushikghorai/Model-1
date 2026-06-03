@@ -1,0 +1,55 @@
+#header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e2e8f0;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+#websiteName {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4f46e5;
+    letter-spacing: -0.02em;
+}
+
+#navigations {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#navigations a {
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+#navigations a:hover {
+    color: #4f46e5;
+    background-color: #f1f5f9;
+}
+
+#navigations a.active {
+    color: #ffffff;
+    background-color: #4f46e5;
+}
+
+#account {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
