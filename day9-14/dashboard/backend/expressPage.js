@@ -45,6 +45,30 @@ app.post("/signup", async (req, res) => {
     }
 });
 
+app.get("/show", async (req, res) => {
+    try {
+        const users = await user_model.find();
+        res.json(users);
+    } catch (error) {
+        console.error("Show Users Error:", error);
+        res.status(500).json({ error: "Internal Server Error while fetching users" });
+    }
+});
+
+app.delete("/users/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const result = await user_model.findByIdAndDelete(id);
+        if (!result) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        res.json({ message: "User deleted successfully" });
+    } catch (error) {
+        console.error("Delete Error:", error);
+        res.status(500).json({ error: "Internal Server Error during deletion" });
+    }
+});
+
 app.get("/netflix", (req, res) => {
     res.send("<head><link rel='stylesheet' href='/express.css'></head><h1>Welcome in Home Page.</h1><nav><a href='/'>Home</a> <a href='/about'>About</a> <a href='/signup'>Sign Up</a></nav><h2>You have lost your path please go through the navigation.</h2>");
 });

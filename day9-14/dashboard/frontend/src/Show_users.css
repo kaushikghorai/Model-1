@@ -1,24 +1,162 @@
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
+/* Users List Container Styling */
+.users-container h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* Scoped User Table to prevent global bleeding */
+.users-table-wrapper {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 10px;
+  transition: var(--transition);
+}
+
+.users-table {
+  font-family: var(--font-family);
+  border-collapse: separate;
+  border-spacing: 0;
   width: 100%;
 }
 
-td,
-th {
-  border: 1px solid #dddddd;
+/* Header & Cell Spacing */
+.users-table th, 
+.users-table td {
+  padding: 16px 20px;
   text-align: left;
-  padding: 8px;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 14px;
+  transition: var(--transition);
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.users-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid var(--card-border);
 }
 
-tr:nth-child(odd) {
-  background-color: #888888;
+/* Highlight the first column (Name) for professional hierarchy */
+.users-table tr td:first-child {
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
-tr:nth-child(1) {
-  background-color: #ffffff;
+.user-profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13px;
+  box-shadow: 0 4px 10px var(--accent-glow);
+}
+
+.user-profile-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.user-profile-id {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.user-email-text {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Status badging */
+.user-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--success-glow);
+  color: var(--success);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--success);
+  border-radius: 50%;
+}
+
+/* Deletion styling */
+.user-btn-delete {
+  background: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  margin: 0;
+}
+
+.user-btn-delete:hover {
+  background-color: var(--danger);
+  color: #ffffff;
+  box-shadow: 0 4px 12px var(--danger-glow);
+}
+
+.btn-icon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+
+/* Subtle Row Hover Effects */
+.users-table tr {
+  transition: var(--transition);
+}
+
+.users-table tr:hover td {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Remove bottom border on the final row */
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Deleting Animation */
+.users-table tr.row-deleting td {
+  opacity: 0.3;
+  background-color: var(--danger-glow);
 }

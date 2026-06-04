@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ShopFlow E-Commerce - Home</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
+
 <div id="header"></div>
+
 <div id="content">
+    <!-- Welcome Hero Banner -->
     <section id="welcome-banner">
-        <h1>Welcome to Our Store!</h1>
-        <p>Explore a wide range of products and find the best deals.</p>
-        <a href="login.html">Shop Now</a>
+        <h1>Welcome to ShopFlow!</h1>
+        <p>Explore high-end collections, curated tech, and the season's best fashion deals.</p>
+        <a href="products.html" class="btn-primary">Shop Our Catalog</a>
     </section>
+
+    <!-- Dynamic Featured Products -->
     <section id="featured-products">
         <h2>Featured Products</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <img src="images/featured.jpg" alt="Featured Product 1">
-                <h3>Product Name 1</h3>
-                <p>₹50.00</p>
-            </div>
-            <div class="product-item">
-                <img src="path/to/featured2.jpg" alt="Featured Product 2">
-                <h3>Product Name 2</h3>
-                <p>$30.00</p>
-            </div>
-            <!-- Add more featured product items here -->
+        <div id="featuredProductList" class="product-list">
+            <div class="loading-placeholder">Loading featured items...</div>
         </div>
     </section>
 
+    <!-- Promotions Section -->
     <section id="promotions">
-        <h2>Promotions</h2>
+        <h2>Active Promotions</h2>
         <div class="promotion-list">
-            <div class="promotion-item">
-                <img src="path/to/promotion1.jpg" alt="Promotion 1">
-                <p>Get up to 50% off on all electronics this week!</p>
+            <div class="promotion-item promo-purple">
+                <h3>Spring Collection</h3>
+                <p>Get up to <strong>50% off</strong> on all category clothing items this week!</p>
+                <span class="promo-badge">Active</span>
             </div>
-            <div class="promotion-item">
-                <img src="path/to/promotion2.jpg" alt="Promotion 2">
-                <p>Cashback of $10 for every $100 spent today!</p>
+            <div class="promotion-item promo-indigo">
+                <h3>Tech Cashback</h3>
+                <p>Receive an instant <strong>$10 credit</strong> for every $100 spent on tech today!</p>
+                <span class="promo-badge">Active</span>
             </div>
-            <!-- Add more promotion items here -->
         </div>
     </section>
 
+    <!-- Categories Section -->
     <section id="categories">
-        <h2>Categories</h2>
+        <h2>Browse Categories</h2>
         <ul class="category-list">
-            <li><a href="category.html">Electronics</a></li>
-            <li><a href="category.html">Clothing</a></li>
-            <li><a href="category.html">Home Appliances</a></li>
-            <!-- Add more category items here -->
+            <li><a href="products.html?cat=electronics">Electronics</a></li>
+            <li><a href="products.html?cat=jewelery">Jewelery</a></li>
+            <li><a href="products.html?cat=men's clothing">Men's Clothing</a></li>
+            <li><a href="products.html?cat=women's clothing">Women's Clothing</a></li>
         </ul>
     </section>
-
 </div>
 
 <div id="footer"></div>
+
 <script src="header.js"></script>
-<script src="scripts.js"></script>
 <script src="home.js"></script>
 <script src="footer.js"></script>
 </body>

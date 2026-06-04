@@ -1,81 +1,131 @@
-#content {
-    padding: 0 20px;
+/* Shopping Cart View Styles */
+.cart-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+@media (max-width: 992px) {
+    .cart-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
-th, td {
-    border-bottom: 1px solid #f1f5f9;
-    padding: 14px 18px;
-    text-align: left;
+.cart-items-wrapper {
+    flex-grow: 1;
 }
 
-th {
-    background-color: #f8fafc;
-    color: #334155;
-    font-weight: 600;
+.cart-summary-card {
+    width: 340px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 94px;
 }
 
-input[type="number"] {
-    width: 60px;
-    padding: 6px 8px;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-    text-align: center;
-    background-color: #f8fafc;
+@media (max-width: 992px) {
+    .cart-summary-card {
+        width: 100%;
+        position: static;
+    }
 }
 
-input[type="number"]:focus {
-    outline: none;
-    border-color: #4f46e5;
-    background-color: #ffffff;
+.cart-summary-card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-button {
-    background-color: #ffffff;
-    color: #475569;
-    border: 1px solid #cbd5e1;
-    padding: 8px 16px;
+.summary-line {
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: none;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
 }
 
-button:hover {
-    border-color: #94a3b8;
-    background-color: #f1f5f9;
+.summary-line.total {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-top: 12px;
 }
 
-.checkout-button {
-    display: inline-block;
-    margin-top: 25px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
+.summary-line hr {
     border: none;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.15);
+    border-top: 1px solid var(--border-color);
+    margin: 12px 0;
 }
 
-.checkout-button:hover {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25);
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Cart Item Rows customization */
+.cart-img-thumbnail {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-img-thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cart-quantity-input {
+    width: 60px;
+    padding: 6px;
+    text-align: center;
+}
+
+/* Remove button */
+.btn-remove {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.btn-remove:hover {
+    color: var(--danger);
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.btn-remove svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+}
+
+/* Empty state */
+.empty-cart {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.empty-cart p {
+    font-size: 16px;
+    color: var(--text-secondary);
 }
