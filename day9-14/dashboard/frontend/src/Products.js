@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Products.css";
 
-function Products(){
-    const [products, setProducts] = useState([]);
+function Products() {
+  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    
+
     fetch("https://fakestoreapi.com/products")
       .then((response) => {
         if (!response.ok) {

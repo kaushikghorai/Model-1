@@ -7,7 +7,8 @@ function Header() {
 				<li><Link to="/">Home</Link></li>
 				<li><Link to="/about">AboutUs</Link></li>
 				<li><a href="/website/home.html">Website</a></li>
-				<li><Link to="/products">Products</Link></li>
+				<li><Link to="/products">Products (API Calling)</Link></li>
+				<li><Link to="/show">Show Users</Link></li>
 				<li><Link to="/signup">Sign Up</Link></li>
 			</ul>
 		</div>
